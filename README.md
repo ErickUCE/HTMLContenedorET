@@ -74,7 +74,7 @@ macOS:
 
     Once Docker is installed and running, open a terminal (CMD or PowerShell on Windows, Terminal on macOS/Linux) and run the following command to download the image from Docker Hub:
 
-    docker pull ericktipan/mi-html:latest
+    docker pull ericktipan/htmlcontenedor:latest
 
     This will download the image you uploaded to Docker Hub on the current computer.
 
@@ -82,7 +82,7 @@ macOS:
 
     After the image is downloaded, run the container using the following command:
 
-    docker run --name ingresaunnombreparaelcontenedor -8080:80 ericktipan/mi-html:latest
+    docker run --name ingresaunnombreparaelcontenedor -8080:80 ericktipan/htmlcontenedor:latest
 
 ## Common Issues and Solutions
 

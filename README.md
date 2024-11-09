@@ -22,77 +22,75 @@ Follow these steps to clone the repository, build the Docker image, and run the 
 
 2. **Construir la Imagen Docker**
 
-   Navega a la carpeta del proyecto en tu terminal y ejecuta el siguiente comando para construir la imagen 
-   Docker a partir del Dockerfile:
+   Navigate to the project folder in your terminal and run the following command to build the Docker image from the Dockerfile:
 
    docker build -t erickuce/htmlcontenedor .
 
-3. **Ejecutar el Contenedor Docker**
+3. **Run the Docker Container**
 
-   Después de que la imagen se haya construido correctamente, ejecuta el siguiente comando para iniciar el 
-   contenedor:
+   Once the image is successfully built, run the following command to start the container:
 
    docker run --name HTMLContenedor -p 8080:80 erickuce/htmlcontenedor:latest
 
-   Esto iniciará Nginx dentro del contenedor y estará listo para servir la página HTML.
+   This will start Nginx within the container, ready to serve the HTML page.
 
-4. **Acceder a la Aplicación**
+4. **Access the Application**
 
-   Abre un navegador web y dirígete a:
+   Open a web browser and go to:
 
    http://localhost:8080
 
-   Deberías ver la página HTML con el mensaje "Erick Tipan" centrado y en negrita.
+   You should see the HTML page displaying "Erick Tipan" centered and in bold.
 
-## Instalación y Ejecución Docker Hub (Manera 2) 
+## Docker Hub Installation and Execution (Method 2)
 
-1. Instalar Docker
-   En la computadora donde deseas probar la imagen, primero necesitas instalar Docker. Aquí están los pasos
-   para hacerlo en Windows, macOS o Linux:
+1. Install Docker
+   On the computer where you want to test the image, first install Docker. Here are the steps for Windows, macOS:
 
-    Windows:
+Windows:
 
-    Ve a Docker Desktop para Windows y descarga el instalador.
-    Ejecuta el instalador y sigue las instrucciones en pantalla.
-    Una vez que Docker esté instalado, reinicia la computadora si se te solicita.
+    -Go to Docker Desktop for Windows and   
+    download the installer.
+    -Run the installer and follow the on- 
+    screen instructions.
+    -Once Docker is installed, restart the 
+    computer if prompted.
 
-    macOS:
+macOS:
 
-    Ve a Docker Desktop para macOS y descarga el instalador.
-    Abre el archivo .dmg descargado y arrastra Docker a la carpeta de Aplicaciones.
-    Abre Docker desde la carpeta de Aplicaciones y sigue las instrucciones para completar la instalación.
+    -Go to Docker Desktop for macOS and 
+    download the installer.
+    -Open the downloaded .dmg file and drag 
+    Docker to the Applications folder.
+    -Open Docker from the Applications 
+    folder and follow the instructions to 
+    complete the installation.
 
-2. Iniciar Docker
+2. Start Docker
 
-    En Windows/macOS, Docker debería iniciarse automáticamente después de la instalación. Si no es así,        
-    abre la aplicación Docker Desktop.
+    On Windows/macOS, Docker should start automatically after installation. If not, open the Docker Desktop application.
 
-3. Descargar la Imagen desde Docker Hub
+3. Download the Image from Docker Hub
 
-    Una vez que Docker esté instalado y en funcionamiento, abre una terminal (CMD o PowerShell en Windows,     
-    Terminal en macOS/Linux) y ejecuta el siguiente comando para descargar la imagen desde Docker Hub:
+    Once Docker is installed and running, open a terminal (CMD or PowerShell on Windows, Terminal on macOS/Linux) and run the following command to download the image from Docker Hub:
 
     docker pull ericktipan/mi-html:latest
 
-    Esto descargará la imagen que subiste a Docker Hub en la computadora actual.
+    This will download the image you uploaded to Docker Hub on the current computer.
 
-4. Ejecutar el Contenedor
+4. Run the Container
 
-    Después de que la imagen esté descargada, ejecuta el contenedor usando el siguiente comando:
+    After the image is downloaded, run the container using the following command:
 
     docker run --name ingresaunnombreparaelcontenedor -8080:80 ericktipan/mi-html:latest
 
-## Problemas Comunes y Soluciones
+## Common Issues and Solutions
 
--No se puede acceder a http://localhost:8080:
+-Cannot access http://localhost:8080:
 
-    -Asegúrate de que Docker esté en ejecución.
-    -Verifica que no haya otro servicio usando el puerto 8080.
-    -Si estás en una red restringida (como una red corporativa), verifica las configuraciones del firewall.
+    -Make sure Docker is running.
+    -Check that no other service is using port 8080.
+    -If you are on a restricted network (such as a corporate network), check firewall settings.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
-
-## Créditos y Agradecimientos
--Erick Tipan: Creación y dockerización del proyecto HTML.
+## Credits and Acknowledgments
+-Erick Tipan: Creation and dockerization of the HTML project.
